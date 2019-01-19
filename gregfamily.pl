@@ -61,5 +61,12 @@ parent(betty,donna).
 %% ?- female(X),parent(Y,X),parent(Z,greg),parent(W,Y),parent(W,Z), Y \= Z.
 %% ?- female(X),parent(Y,X),parent(Z,greg),parent(W,Y),parent(W,Z), not(Y=Z).
 
+mother(X,Y):-
+	parent(X,Y),
+	female(X).
+
+is_a_mother(X):-
+	parent(X,_),
+	female(X).
 
 
