@@ -70,3 +70,11 @@ is_a_mother(X):-
 	female(X).
 
 
+father(X,Y):-
+	parent(X,Y),
+	male(X).
+
+is_a_father(X):-
+	parent(X,_),
+	male(X).
+		
