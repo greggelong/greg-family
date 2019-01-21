@@ -77,4 +77,6 @@ father(X,Y):-
 is_a_father(X):-
 	parent(X,_),
 	male(X).
-		
+	
+grandparent(GP,Y):-
+	parent(X,Y), parent(GP,X).	
