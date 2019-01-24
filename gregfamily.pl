@@ -149,11 +149,10 @@ aunt(X,Y):-
 	
 	
 
-/*list_uncle_of(Y):-
+list_uncle_of(Y):-
 	uncle(X,Y),
 	write(X),
 	nl,
 	fail.
 list_uncle_of(_).
-this makes a endless loop you need to cut.
-*/	
+ 
