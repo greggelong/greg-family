@@ -3,6 +3,7 @@ female(betty).
 female(dawn).
 female(debbie).
 female(ester).
+female(kent_s).
 female(mary).
 female(nancy).
 female(olivia).
@@ -16,6 +17,7 @@ male(dirk).
 male(don).
 male(greg).
 male(kent).
+male(kent_b).
 male(lou).
 male(pat).
 male(paul).
@@ -31,6 +33,11 @@ parent(pat, angela).
 
 parent(lou, kent).
 parent(ester, kent).
+parent(lou, kent_b).
+parent(ester, kent_b).
+parent(lou, kent_s).
+parent(ester, kent_s).
+
 parent(bud, nancy).
 parent(bud, betty).
 parent(bud, bill).
