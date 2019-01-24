@@ -127,8 +127,11 @@ uncle(X,Y):-
 	male(X).
 
 uncle(X,Y):-
-	aunt(Z,Y),
-	married(X,Z).
+	%aunt(Z,Y), define aunt as parent sib to avoid endless backtracking
+	married(X,Z),
+    parent(W,Y),
+	sibling(W,Z),
+	female(Z).
 
 		
 
@@ -138,8 +141,12 @@ aunt(X,Y):-
 	female(X).
 
 aunt(X,Y):-
-	uncle(Z,Y),
-	married(X,Z).
+	%uncle(Z,Y), new defined non recurs
+	married(X,Z),
+	parent(W,Y),
+	sibling(W,Z),
+	male(Z).
+	
 	
 
 /*list_uncle_of(Y):-
