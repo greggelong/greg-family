@@ -16,6 +16,15 @@ female(jennifer).
 female(jen).
 female(marijana).
 female(simone).
+female(ljubica).
+female(olivera).
+female(jelena).
+female(danica).
+female(vera).
+female(mara).
+female(goca).
+female(andjela).
+female(sanja).
 
 male(bill).
 male(bud).
@@ -32,6 +41,20 @@ male(daniel).
 male(joseph).
 male(tim).
 male(kevin).
+male(ivan).
+male(miroslav).
+male(deja).
+male(pajta).
+male(bata).
+male(miodrag).
+male(branko).
+male(deja).
+male(dika).
+male(sava).
+male(dimitrije).
+male(dejan).
+
+
 
 parent(kent,olivia).
 parent(jennifer,olivia).
@@ -82,6 +105,47 @@ parent(betty,don_jr).
 parent(betty,diane).
 parent(betty,donna).
 
+parent(ljubica,olivera).
+parent(ljubica,miroslav).
+parent(ljubica,bata).
+parent(ljubica,deja).
+parent(ljubica,jelena).
+parent(ljubica,pajta).
+parent(ivan,olivera).
+parent(ivan,miroslav).
+parent(ivan,bata).
+parent(ivan,deja).
+parent(ivan,jelena).
+parent(ivan,pajta).
+
+parent(danica,vera).
+parent(danica,miodrag).
+parent(danica,branko).
+parent(danica,mara).
+parent(dimitrije,vera).
+parent(dimitrije,miodrag).
+parent(dimitrije,branko).
+parent(dimitrije,mara).
+
+parent(olivera,marijana).
+parent(olivera,dejan).
+parent(miodrag,marijana).
+parent(miodrag,dejan).
+
+parent(vera,sanja).
+parent(sava,sanja).
+
+parent(dejan,andjela).
+parent(dejan,dika).
+parent(goca,andjela).
+parent(gotca,dika).
+
+parent(greg,minipig).
+parent(marijana,minipig).
+
+
+
+
 %% chapter 5 adventure in prolog two way door problem
 
 spouse(ester,lou).
@@ -92,6 +156,11 @@ spouse(nancy,kent).
 spouse(nancy, pat).
 spouse(jennifer,kent).
 spouse(jen,angela).
+spouse(ljubica,ivan).
+spouse(danica,dimitrije).
+spouse(olivera,miodrag).
+spouse(vera,sava).
+spouse(goca,dejan).
 
 part(marijana,greg).
 
@@ -188,7 +257,11 @@ uncle(X,Y):-
 	sibling(W,Z),
 	female(Z).
 
-		
+uncle(X,Y):-
+	partner(X,Z),
+	parent(W,Y),
+	sibling(W,Z),
+	female(Z).		
 
 aunt(X,Y):-
 	parent(Z,Y),
@@ -202,7 +275,11 @@ aunt(X,Y):-
 	sibling(W,Z),
 	male(Z).
 	
-	
+aunt(X,Y):-
+	partner(X,Z),
+	parent(W,Y),
+	sibling(W,Z),
+	male(Z).	
 
 list_uncle_of(Y):-
 	uncle(X,Y),
