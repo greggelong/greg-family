@@ -31,6 +31,6 @@ There are more than one match. Click the 'next' button to see other matches.
 Who = greg
 Who = angela
 
-[you can query this knowledgebase online on SWISH](https://swish.swi-prolog.org/p/greg%20family.pl)
+[You can query this knowledgebase online on SWISH](https://swish.swi-prolog.org/p/greg%20family.pl)
 
 [see: SWI-prolog website and Learn Prolog Now](https://www.swi-prolog.org/) 
