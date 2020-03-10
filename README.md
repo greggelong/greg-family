@@ -1,6 +1,7 @@
 # My family knowledge base
-## fact, rules and clauses in SWI-prolog
-see: SWI-prolog website and Learn Prolog Now 
+## facts, rules and clauses in SWI-prolog
+
+Here are some examples of how the syntax works.
 
 cousin(greg,X).
 
@@ -11,7 +12,8 @@ spouse(nancy,X).
 
 nancy is a spouse of whom.
 
-[you can query this knowledgebase online on SWISH](https://swish.swi-prolog.org/p/greg%20family.pl)
+You ask questions or query the knowledge-base.
+The command prompt is '?'.
 
 ?. father(Who,greg).     
 Who = kent
@@ -19,3 +21,16 @@ Who = kent
 In prolog variables are upper case. You can use X or Who or any uppper case character or word. 
 The variables pattern match with rules and facts to give the result.
 facts like greg or kent are are lower case.
+
+for some questions eg.
+
+father(kent,Who).
+
+There are more than one match. Click the 'next' button to see other matches. 
+
+Who = greg
+Who = angela
+
+[you can query this knowledgebase online on SWISH](https://swish.swi-prolog.org/p/greg%20family.pl)
+
+[see: SWI-prolog website and Learn Prolog Now](https://www.swi-prolog.org/) 
