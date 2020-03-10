@@ -20,15 +20,16 @@ Who = kent
 
 In prolog variables are upper case. You can use X or Who or any uppper case character or word. 
 The variables pattern match with rules and facts to give the result.
-facts like greg or kent are are lower case.
+Facts like greg or kent are are lower case.
 
-for some questions eg.
+For some questions eg:
 
 father(kent,Who).
 
-There are more than one match. Click the 'next' button to see other matches. 
+there are more than one match. Click the 'next' button to see other matches. 
 
 Who = greg
+
 Who = angela
 
 [You can query this knowledgebase online on SWISH](https://swish.swi-prolog.org/p/greg%20family.pl)
